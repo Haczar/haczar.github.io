@@ -6,6 +6,7 @@ import { Link } from 'react-router-dom';
 const Header: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
+  const showResources = false;
 
   // Listen for scroll events to adjust header size
   useEffect(() => {
@@ -52,9 +53,11 @@ const Header: React.FC = () => {
               My Portfolio
             </a>
 
-            <a href="/Resource" className={hovertextproperties}>
-              R&I
-            </a>
+            {showResources && (
+              <a href="/Resource" className={hovertextproperties}>
+                R&I
+              </a>
+            )}
 
             <a href="https://metavoke.com" target="_blank" rel="noopener noreferrer" className={`${hovertextproperties}`}>
               Services
@@ -87,11 +90,13 @@ const Header: React.FC = () => {
                     Portfolio
                 </a>
             </li>
-            <li>
+            {showResources && (
+              <li>
                 <a href="/Resource" className={`${hovertextproperties} block`}>
-                    R&I
+                  R&I
                 </a>
-            </li>
+              </li>
+            )}
             <li>
                 <a href="https://metavoke.com" target="_blank" rel="noopener noreferrer" className={`${hovertextproperties}`}>
                     Services
