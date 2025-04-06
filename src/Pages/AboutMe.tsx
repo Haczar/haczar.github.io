@@ -8,7 +8,8 @@ import { Link } from 'react-router-dom';
     const carouselImages = [
         "/images/AboutMe1.jpg",
         "/images/AboutMe2.jpg",
-        "/images/AboutMe3.jpg"
+        "/images/AboutMe3.jpg",
+        "/images/AboutMe4.jpg"
     ];
 
     interface AboutMeProps {
