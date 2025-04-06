@@ -8,25 +8,33 @@ const Header: React.FC = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const showResources = false;
 
-  // Listen for scroll events to adjust header size
+  // Scroll Events
   useEffect(() => {
+    // 👇 Handles shrinking the header on scroll
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 50);
+  
+      // 👇 Auto-close the mobile menu if it's open
+      if (isOpen) setIsOpen(false);
     };
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
-
-  // Force mobile menu closed when viewport is resized to desktop width
-  useEffect(() => {
+  
+    // 👇 Auto-close mobile menu if window is resized to desktop width
     const handleResize = () => {
       if (window.innerWidth >= 768) {
         setIsOpen(false);
       }
     };
+  
+    // ✅ Register listeners
+    window.addEventListener('scroll', handleScroll);
     window.addEventListener('resize', handleResize);
-    return () => window.removeEventListener('resize', handleResize);
-  }, []);
+  
+    // ✅ Cleanup listeners when component unmounts
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+      window.removeEventListener('resize', handleResize);
+    };
+  }, [isOpen]); // <-- track `isOpen` to close on scroll
 
   // Change header padding and logo height based on scroll state
   const headerPadding = isScrolled ? 'py-2' : 'py-4';
@@ -81,24 +89,24 @@ const Header: React.FC = () => {
       >
         <ul className="text-center space-y-4">
             <li>
-                <Link to="/AboutMe" className={hovertextproperties}>
+                <Link to="/AboutMe" className={hovertextproperties} onClick={() => setIsOpen(false)}>
                   About Me
                 </Link>
             </li>
             <li>
-                <Link to="/Portfolio" className={`${hovertextproperties} block`}>
+                <Link to="/Portfolio" className={`${hovertextproperties} block`} onClick={() => setIsOpen(false)}>
                     Portfolio
                 </Link>
             </li>
             {showResources && (
               <li>
-                <Link to="/Resource" className={`${hovertextproperties} block`}>
+                <Link to="/Resource" className={`${hovertextproperties} block`} onClick={() => setIsOpen(false)}>
                   R&I
                 </Link>
               </li>
             )}
             <li>
-                <a href="https://metavoke.com" target="_blank" rel="noopener noreferrer" className={`${hovertextproperties}`}>
+                <a href="https://metavoke.com" target="_blank" rel="noopener noreferrer" className={`${hovertextproperties}`} onClick={() => setIsOpen(false)}>
                     Services
                 </a>
             </li>

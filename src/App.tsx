@@ -4,6 +4,7 @@ import { Routes, Route } from 'react-router-dom';
 import Header from './Components/Header';
 import Footer from './Components/Footer';
 import ContactModal from './Components/ContactModal';
+import ScrollToTop from './Components/ScrollToTop';
 //pages
 import Home from './Pages/Home';
 import AboutMe from './Pages/AboutMe';
@@ -26,6 +27,7 @@ const App: React.FC = () => {
     <div className="flex flex-col min-h-screen bg-[#030302]">
       <Header />
       <main className="flex-grow">
+      <ScrollToTop />
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/AboutMe" element={<AboutMe onContactClick={openModal} />} />
