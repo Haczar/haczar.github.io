@@ -1,6 +1,7 @@
 import React from 'react';
 import ImageCarousel from '../Components/ImageCarousel';
 import PillarsTabs from '../Components/PillarsTabs';
+import { Link } from 'react-router-dom';
 
 
       // Define an array of image URLs for your carousel.
@@ -78,9 +79,9 @@ import PillarsTabs from '../Components/PillarsTabs';
             My ultimate goal is to be known for creating XR experiences/applications/games with my pillars of great code in mind.
             I am looking for a company that will help me grow as an engineer, expand as an artist, and thrive as a creator.
             Check out{' '}
-            <a href="/Portfolio" className="text-TextSecondaryColor hover:text-HoverColor">
+            <Link to="/Portfolio" className="text-TextSecondaryColor hover:text-HoverColor">
               my portfolio
-            </a>
+            </Link>
             , and if it looks like an ideal fit in your company please{' '}
             <a
               href="#"

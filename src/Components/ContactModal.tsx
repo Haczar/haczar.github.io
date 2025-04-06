@@ -46,7 +46,7 @@ const ContactModal: React.FC<ModalProps> = ({ isOpen, onClose }) => {
             </a>
           </p>
           <a
-            href="/files/HC_Resume.pdf"
+            href="files/HC_Resume.pdf"
             className="inline-block bg-set5 text-FFBC00 py-2 px-4 rounded-none hover:bg-primary"
           >
             Download My Resume
