@@ -1,5 +1,6 @@
 // #region FeatureCard Component (Updated with Hover Text Color Change)
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 export interface FeatureCardProps {
   title: string;
@@ -10,7 +11,7 @@ export interface FeatureCardProps {
 
 const FeatureCard: React.FC<FeatureCardProps> = ({ title, description, image, link }) => {
   return (
-    <a href={link} className="block group">
+    <Link to={link} className="block group">
       <div
         className="bg-neutral-900 shadow transition-all duration-300 transform rounded-lg overflow-hidden border border-TextSecondaryColor
           group-hover:-translate-y-2 group-hover:border-TextPrimaryColor group-hover:bg-[linear-gradient(90deg,#BB9803_0%,#6B9F10_100%)]"
@@ -37,7 +38,7 @@ const FeatureCard: React.FC<FeatureCardProps> = ({ title, description, image, li
           className="w-full h-48 object-cover object-[center_25%] transition-transform duration-300 group-hover:scale-110"
         />
       </div>
-    </a>
+    </Link>
   );
 };
 

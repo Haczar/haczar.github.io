@@ -45,18 +45,18 @@ const Header: React.FC = () => {
         
         {/* Desktop Navigation (visible on md and up) */}
         <nav className="ml-auto hidden md:flex space-x-6 ">
-            <a href="/AboutMe" className={hovertextproperties}>
+            <Link to="/AboutMe" className={hovertextproperties}>
               About Me
-            </a>
+            </Link>
 
-            <a href="/Portfolio" className={hovertextproperties}>
+            <Link to="/Portfolio" className={hovertextproperties}>
               My Portfolio
-            </a>
+            </Link>
 
             {showResources && (
-              <a href="/Resource" className={hovertextproperties}>
+              <Link to="/Resource" className={hovertextproperties}>
                 R&I
-              </a>
+              </Link>
             )}
 
             <a href="https://metavoke.com" target="_blank" rel="noopener noreferrer" className={`${hovertextproperties}`}>
@@ -86,15 +86,15 @@ const Header: React.FC = () => {
                 </Link>
             </li>
             <li>
-                <a href="/Portfolio" className={`${hovertextproperties} block`}>
+                <Link to="/Portfolio" className={`${hovertextproperties} block`}>
                     Portfolio
-                </a>
+                </Link>
             </li>
             {showResources && (
               <li>
-                <a href="/Resource" className={`${hovertextproperties} block`}>
+                <Link to="/Resource" className={`${hovertextproperties} block`}>
                   R&I
-                </a>
+                </Link>
               </li>
             )}
             <li>
