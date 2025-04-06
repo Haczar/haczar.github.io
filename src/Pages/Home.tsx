@@ -19,6 +19,7 @@ const featuresData: FeatureCardProps[] = [
     description: "If you do similar work, you may be interested.",
     image: "/images/SoulkeeperTeam.jpg",
     link: "/Resources",
+    isHidden: true, 
   },
 ];
 
@@ -55,7 +56,7 @@ const Home: React.FC = () => {
       <section className="py-12 bg-[#030302]">
         <div className="max-w-7xl mx-auto px-4">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {featuresData.map((feature, index) => (
+            {featuresData .filter(feature => !feature.isHidden) .map((feature, index) => (
               <FeatureCard
                 key={index}
                 title={feature.title}

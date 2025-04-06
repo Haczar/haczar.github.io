@@ -7,6 +7,7 @@ export interface FeatureCardProps {
   description: string;
   image: string;
   link: string;
+  isHidden?: boolean; // Optional prop to hide the card
 }
 
 const FeatureCard: React.FC<FeatureCardProps> = ({ title, description, image, link }) => {
