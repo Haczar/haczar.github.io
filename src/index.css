@@ -1,0 +1,18 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Ensure the Swiper container is positioned relatively */
+.embla {
+    position: relative;
+    width: 100%;
+  }
+  
+  .embla__container {
+    display: flex;
+  }
+  
+  .embla__slide {
+    position: relative;
+    min-width: 100%;
+  }
