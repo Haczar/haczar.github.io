@@ -98,13 +98,11 @@ const Header: React.FC = () => {
                     Portfolio
                 </Link>
             </li>
-            {showResources && (
-              <li>
-                <Link to="/Resource" className={`${hovertextproperties} block`} onClick={() => setIsOpen(false)}>
-                  R&I
-                </Link>
-              </li>
-            )}
+            <li>
+              <Link to="/Resource" className={`${hovertextproperties} block`} onClick={() => setIsOpen(false)}>
+                R&I
+              </Link>
+            </li>
             <li>
                 <a href="https://metavoke.com" target="_blank" rel="noopener noreferrer" className={`${hovertextproperties}`} onClick={() => setIsOpen(false)}>
                     Services
