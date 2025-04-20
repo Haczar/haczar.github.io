@@ -16,3 +16,9 @@
     position: relative;
     min-width: 100%;
   }
+
+  .masonry-column {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }

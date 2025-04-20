@@ -61,11 +61,11 @@ const Header: React.FC = () => {
               My Portfolio
             </Link>
 
-            {showResources && (
+            {
               <Link to="/Resource" className={hovertextproperties}>
                 R&I
               </Link>
-            )}
+            }
 
             <a href="https://metavoke.com" target="_blank" rel="noopener noreferrer" className={`${hovertextproperties}`}>
               Services

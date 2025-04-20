@@ -32,7 +32,7 @@ const App: React.FC = () => {
           <Route path="/" element={<Home />} />
           <Route path="/AboutMe" element={<AboutMe onContactClick={openModal} />} />
           <Route path="/Portfolio" element={<Portfolio onContactClick={openModal} />} />
-          <Route path="/Resources" element={<Resource />} />
+          <Route path="/Resource" element={<Resource />} />
           
           {/* Add other routes here */}
         </Routes>

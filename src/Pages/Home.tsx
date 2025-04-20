@@ -18,8 +18,7 @@ const featuresData: FeatureCardProps[] = [
     title: "Resources & Inspirations",
     description: "If you do similar work, you may be interested.",
     image: "/images/SoulkeeperTeam.jpg",
-    link: "/Resources",
-    isHidden: true, 
+    link: "/Resource",
   },
 ];
 
