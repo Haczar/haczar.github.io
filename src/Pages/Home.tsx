@@ -29,16 +29,17 @@ const Home: React.FC = () => {
       <section className="pt-24 pb-12 bg-[#030302]">
         <div className="max-w-7xl mx-auto px-4 flex flex-col lg:flex-row items-center">
           {/* Text Column */}
-            <div className="lg:w-1/2 mb-8 lg:mb-0">
+          <div className="lg:w-1/2 mb-8 lg:mb-0">
             <h1
-            className="text-5xl font-bold font-oxygen bg-clip-text text-transparent"
-            style={{ backgroundImage: "linear-gradient(45deg, #FFD71D 0%, #649B10 70%)" }}
+              className="text-5xl font-bold font-oxygen bg-clip-text text-transparent"
+              style={{ backgroundImage: "linear-gradient(45deg, #FFD71D 0%, #649B10 70%)" }}
             >
-                Haczar Criollo
+              Haczar Criollo
             </h1>
             <div className="mt-4 space-y-2">
               <h2 className="text-3xl font-semibold font-oxygen text-TextSecondaryColor">
-                <span className="line-through decoration-TextPrimaryColor">AR/VR/MR</span> XR DEVELOPER</h2>
+                <span className="line-through decoration-TextPrimaryColor">AR/VR/MR</span> XR DEVELOPER
+              </h2>
               <h2 className="text-3xl font-semibold font-oxygen text-TextSecondaryColor">
                 UE/Unity DEVELOPER
               </h2>
@@ -55,18 +56,30 @@ const Home: React.FC = () => {
       <section className="py-12 bg-[#030302]">
         <div className="max-w-7xl mx-auto px-4">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {featuresData .filter(feature => !feature.isHidden) .map((feature, index) => (
-              <FeatureCard
-                key={index}
-                title={feature.title}
-                description={feature.description}
-                image={feature.image}
-                link={feature.link}
-              />
-            ))}
+            {featuresData
+              .filter(feature => !feature.isHidden)
+              .map((feature, index) => (
+                <FeatureCard
+                  key={index}
+                  title={feature.title}
+                  description={feature.description}
+                  image={feature.image}
+                  link={feature.link}
+                />
+              ))}
           </div>
         </div>
       </section>
+
+      {/* Video Preload Section (hidden) */}
+      {Array.from({ length: 3 }, (_, i) => (
+        <video
+          key={i}
+          src={`videos/Inspiration${i + 1}.webm`}
+          preload="metadata"
+          style={{ display: 'none' }}
+        />
+      ))}
     </>
   );
 };
