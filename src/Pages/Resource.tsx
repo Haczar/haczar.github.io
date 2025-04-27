@@ -11,7 +11,7 @@ const breakpointColumnsObj = {
 const Resource: React.FC = () => {
   const videoFiles = useMemo(
     () =>
-      Array.from({ length: 14 }, (_, i) => ({
+      Array.from({ length: 17 }, (_, i) => ({
         path: `videos/Inspiration${i + 1}.webm`,
         alt: `Inspiration ${i + 1}`,
       })),
