@@ -62,7 +62,7 @@ const portfolioItems: PortfolioItem[] = [
     {
         id: 7,
         title: "Animal Behavior Assessment (PC/VR)",
-        videoUrl: "https://www.youtube.com/embed/NpEaa2P7qZI",
+        videoUrl: "https://youtube.com/embed/SMw3MadGQEQ",
         summaryTitle: "A Summary of Animal Behavior Assessment",
         description:
           "Learning how to handle animals before students are prepared can be dangerous for both the animal and the handler. The Unity College XR Innovation Lab has developed a simulation where students can interact safely with an animal and study how they react to their handling tactics In this assignment students will learn how to recognize animal body language and behavior, assess how human behavior impacts animal behavior, how to respond appropriately to animal body language and behavior, conduct an animal behavior assessment and identify low-stress handling techniques for human-animal interaction. \n \n As a Software Engineer contracted by Unity College, I was in charge of preparing a prototype of this application as close to production as possible given a short time constraint. In a team of 2, I was able to complete the following tasks: \n Level Design, all UI (Main, Pause, Settings, and Control Menu), the interaction mechanics (UX) with the animal and the reactions the dog would have to those interactions. On top of that I was able to prototype a VR version building on the existing codebase.",
